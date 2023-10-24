@@ -8,7 +8,7 @@
 \<[Tareq Hassan](https://github.com/thass004)\>
 \<[Jay Muthyala](https://github.com/jmuth004)\>
 \<[Arya Bhattacharjee](https://github.com/abhat090)\>
-\<[A... Palu...](https://github.com/apalu003)\>
+\<[Aditya Paluri](https://github.com/apalu003)\>
 
  > You will be forming a group of **FOUR** students and working on an interesting project. The project has 4 phases, each one with specific requirements. A list of proposed project ideas that have been successful in previous quarters is listed in the project specifications document on Canvas. You can select an idea from the list and start thinking about the features you will implement. If you want to propose your own original idea, you will have to contact your instructor to discuss the project and obtain written permission before you submit your project proposal (Phase 1). The project work should be divided almost equally among team members. You can of course help each other, but it needs to be clear who will be responsible for which features. Additionally, you are expected to follow Scrum patterns, specifically the use of a Scrum (Project) board, Sprints, and Scrum meetings.
 
