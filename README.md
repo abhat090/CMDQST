@@ -6,7 +6,7 @@
  
  > Authors: \<[Sujith Sanniboyina](https://github.com/Sujith-Sanniboyina)\>
 \<[Tareq Hassan](https://github.com/thass004)\>
-\<[Jay Muthyala](https://github.com/jmuth004)\>
+\<[Jay Muthyala](https://github.com/cbearsl72)\>
 \<[Arya Bhattacharjee](https://github.com/abhat090)\>
 \<[Aditya Paluri](https://github.com/apalu003)\>
 
