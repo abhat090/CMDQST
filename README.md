@@ -2,7 +2,7 @@
  > Prompt text is any lines beginning with "\>"
  > Replace anything between \<...\> with your project specifics and remove angle brackets. For example, you need to name your project and replace the header right below this line with that title (no angle brackets).
 
-# \<RPG Card Simulator\>
+# RPG Card Simulator
  
  > Authors: \<[Sujith Sanniboyina](https://github.com/Sujith-Sanniboyina)\>
 \<[Tareq Hassan](https://github.com/thass004)\>
