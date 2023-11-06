@@ -1,17 +1,14 @@
- > As you complete each section you **must** remove the prompt text. Every *turnin* of this project includes points for formatting of this README so keep it clean and keep it up to date. 
- > Prompt text is any lines beginning with "\>"
- > Replace anything between \<...\> with your project specifics and remove angle brackets. For example, you need to name your project and replace the header right below this line with that title (no angle brackets).
-
 # RPG Card Simulator
  
- > Authors: \<[Sujith Sanniboyina](https://github.com/Sujith-Sanniboyina)\>
-\<[Tareq Hassan](https://github.com/thass004)\>
-\<[Jay Muthyala](https://github.com/cbearsl72)\>
-\<[Arya Bhattacharjee](https://github.com/abhat090)\>
-\<[Aditya Paluri](https://github.com/apalu003)\>
+ > Authors: [Sujith Sanniboyina](https://github.com/Sujith-Sanniboyina)
+[Tareq Hassan](https://github.com/thass004)
+[Jay Muthyala](https://github.com/cbearsl72)
+[Arya Bhattacharjee](https://github.com/abhat090)
+[Aditya Paluri](https://github.com/apalu003)
 
 ## Project Description
- We want to make an RPG game. We find this interesting because we all love playing video games and have a keen interest in engineering one from the ground up. We plan to use C++, and a library for the UI and output of the game. The input will be the number of characters and the player names and the output will be the name of the player that won and the number of points they received. The features that the project provides are real time point updating as well as real time piece (object) moving on the map.
+We want to make an RPG game. We find this interesting because we all love playing video games and have a keen interest in engineering one from the ground up. We plan to use C++, and a library for the UI and output of the game. The input will be the number of characters and the player names and the output will be the name of the player that won and the number of points they received. The features that the project provides are real time point updating as well as real time piece (object) moving on the map.
+ > Need to add more specifics about gameplay here.
 
 
  > ## Phase II
