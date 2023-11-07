@@ -7,8 +7,19 @@
 [Aditya Paluri](https://github.com/apalu003)
 
 ## Project Description
-We want to make an RPG game. We find this interesting because we all love playing video games and have a keen interest in engineering one from the ground up. We plan to use C++, and a library for the UI and output of the game. The input will be the number of characters and the player names and the output will be the name of the player that won and the number of points they received. The features that the project provides are real time point updating as well as real time piece (object) moving on the map.
- > Need to add more specifics about gameplay here.
+We want to make an RPG Card game. We find this interesting because we all love playing video games and have a keen interest in engineering one from the ground up. The game consists of a simple gameplay loop that can be easily expanded upon and plays in the following way:
+
+1. You start with a hand of cards, these will have different actions such as attack, defend, heal, etc.
+2. The 'player' will pick a card to play, against an AI 'monster'.
+3. Based on the card selected, the player will either attack the monster, set up a defense, or heal.
+4. After the player's action has concluded, the AI moster will select a psuedo random move from a bank of options, and play that move.
+5. This gameplay loop will continue, with the possibility of some random events to vary the gameplay.
+6. If the player manages to defeat the monster, the monster will 'drop' new cards which the player collects, and uses in the next battle, the game then continues to the next monster.
+7. If the player loses, or runs out of cards, the game ends, and the player score is displayed as the number of monsters that have been defeated.
+
+We plan to develop the game within C++, where the output of the game will simply be a console output game. The input will be done via keyboard (typing into terminal). We also plan to leave many of the game-objects open for further expansion, such as more complicated cards, or multiple actions at a time.
+
+We will begin with fairly basic gameplay and expand from there...
 
 
  > ## Phase II
