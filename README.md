@@ -1,4 +1,5 @@
 # RPG Card Simulator
+
  
  > Authors: [Sujith Sanniboyina](https://github.com/Sujith-Sanniboyina)
 [Tareq Hassan](https://github.com/thass004)
@@ -23,6 +24,7 @@ We will begin with fairly basic gameplay and expand from there...
 
 
  > ## Phase II
+This UML diagram shows the design of our RPG card game. It consists of five main classes: Card, Attack, Heal, Defense, Player, and Enemy. Cards can be Attack, Heal, or Defense cards. Players and enemies can have a list of cards associated with them that can do either Attack, Heal or Defense. The diagram also shows how a user interacts with the game, starting at the terminal and getting a set of cards to perform actions on other enemies.
  > In addition to completing the "User Interface Specification" and "Class Diagram" sections below, you will need to:
  > * Create an "Epic" (note) for each feature. Place these epics in the `Product Backlog` column
  > * Complete your first *sprint planning* meeting to plan out the next 7 days of work.
