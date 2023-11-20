@@ -1,19 +1,13 @@
 {
     "configurations": [
         {
-            "name": "Mac",
+            "name": "Winx32",
             "includePath": [
                 "${workspaceFolder}/game/**/",
                 "${workspaceFolder}/game/objects/headers/*"
             ],
             "defines": [],
-            "macFrameworkPath": [
-                "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks"
-            ],
-            "compilerPath": "/usr/bin/clang",
             "cStandard": "c17",
-            "intelliSenseMode": "macos-clang-arm64",
-            "configurationProvider": "ms-vscode.cmake-tools"
         }
     ],
     "version": 4
