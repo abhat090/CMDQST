@@ -21,18 +21,21 @@ We want to make an terminal based RPG game. We find this interesting because we 
  The monsters and the cards will get more powerful as the game continues, with new cards being unlocked later on in the game
  Additional features include element dynamics, with weaknesses and strengths
 
-The game will be developed within C++, where the only libraries we plan to use are the basic stdlib.h as well as iostream, in order to handle our console input and output.
+The game will be developed within C++, where the only libraries we plan to use are the basic stdlib.h as well as iostream, in order to handle our console input and output. We may consider using a Time library to control output as well.
 
 The input will primarily consist of text based commands that the user will give to the terminal. On the home screen, similar to terminal applications we've built in the past, the user will select the letter and press enter in regards to the menu item that they would like to select. However once the user is in game, the primary input will be in the form of 'commands' which are the way in which the player will use the cards given to them.
 
 Output from the game will mostly consist of the screens displayed below, where the enemy will have random voicelines and/or text that describes their emotions towards you. After your input (your move), the enemy will then themselves attack back using a similar set of moves that are available to you. Screens such as the menu screen and game-over screen are simply static text.
 
+## Class Diagram
 This UML diagram shows the design of our RPG card game. It consists of multple primary classes: Card, Player, Enemy, Input, and Output, as well as many subclasses such as Card:Attack or Card:Type. Cards can be Attack, Heal, Type or Defense cards. Players and enemies can have a list of cards associated with them that can do either Attack, Heal or Defense. The diagram also shows how a user interacts with the game, starting at the terminal and getting a set of cards to perform actions on other enemies. (NEEDS TO BE UPDATED)
 
-![Screenshot of UML Diagram](https://github.com/cs100/final-project-jmuth004-ssan003-abhat090-thass004/assets/137970302/6ec50141-ffb8-4a5a-8853-74bfb1898d08)
+![Class Diagram](https://github.com/cs100/final-project-jmuth004-ssan003-abhat090-thass004/assets/137970302/6ec50141-ffb8-4a5a-8853-74bfb1898d08)
 
-### Navigation Diagram
-> Draw a diagram illustrating how the user can navigate from one screen to another. Here is an [example](https://creately.com/diagram/example/ikfqudv82/user-navigation-diagram-classic?r=v). It can be useful to label each symbol that represents a screen so that you can reference the screens in the next section or the rest of the document if necessary. Give a brief description of what the diagram represents.
+## Navigation Diagram
+![Navigation Diagram](https://github.com/cs100/final-project-jmuth004-ssan003-abhat090-thass004/assets/137970302/264200d1-b5da-4981-b25c-d5507d42b16f)
+
+This navigation diagram shows the way in which each screen of our game is connected, and how each screen is accessed. The game-over screen is exited automatically after 5 seconds.
 
 ## Screen Layout
 
