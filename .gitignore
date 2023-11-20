@@ -3,3 +3,6 @@ CMakeCache.txt
 Makefile
 *.cmake
 CMakeFiles/
+*.vcxproj
+*.vcxproj.filters
+*.sln
