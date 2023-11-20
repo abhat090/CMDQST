@@ -33,7 +33,7 @@ This UML diagram shows the design of our RPG card game. It consists of multple p
 ![Class Diagram](https://github.com/cs100/final-project-jmuth004-ssan003-abhat090-thass004/assets/137970302/6ec50141-ffb8-4a5a-8853-74bfb1898d08)
 
 ## Navigation Diagram
-![Navigation Diagram](https://github.com/cs100/final-project-jmuth004-ssan003-abhat090-thass004/assets/137970302/264200d1-b5da-4981-b25c-d5507d42b16f)
+![Navigation Diagram](https://github.com/cs100/final-project-jmuth004-ssan003-abhat090-thass004/assets/137970302/214a4d29-1f57-41ec-9867-8c87a4fb0708)
 
 This navigation diagram shows the way in which each screen of our game is connected, and how each screen is accessed. The game-over screen is exited automatically after 5 seconds.
 
