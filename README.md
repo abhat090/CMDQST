@@ -7,6 +7,8 @@
 [Arya Bhattacharjee](https://github.com/abhat090),
 [Aditya Paluri](https://github.com/apalu003)
 
+### Note: Windows developers -> Branch from abhat090/windows_stable branch
+
 ## Project Description
 We want to make an terminal based RPG game. We find this interesting because we all love playing video games and have a keen interest in developing one from the ground up. The game consists of a simple gameplay loop that can be easily expanded upon and plays in the following way:
 
