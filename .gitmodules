@@ -1,0 +1,3 @@
+[submodule "game/objects/src/googletest"]
+	path = game/objects/src/googletest
+	url = https://github.com/google/googletest.git
