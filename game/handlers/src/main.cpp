@@ -7,23 +7,29 @@
 
 */
 
-#include "input.hpp"
-#include "output.hpp"
-#include "player.hpp"
+#include <iostream>
+#include <fstream>
+#include <vector>
+
+using namespace std;
 
 int main(){
     //Placeholder code
-    Output output;
-    Input input;
+    ifstream file;
+    vector<string> _display(10);
+    file.open("test.txt");
 
-    Player player;
+    system("clear");
+    for(int i = 0; i < 10; i++){
+        getline(file, _display.at(i));
+    }
 
-    int z = player.multiply(4,5);
+    for(int i = 0; i < 10; i++){
+        cout << _display.at(i) << endl;
+    }
 
-    output.clrscr();
-
-    string myString = input.getInput();
-    output.println(myString + to_string(z));
+    file.close();
+    return 0;
     
     return 0;
 }

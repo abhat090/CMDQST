@@ -1,0 +1,10 @@
+Welcome in! What would you like to do?
+DO -> DEATH
+DO -> DEATH
+DO -> DEATH
+COL -> Look at your Collection
+NAME -> Set Name
+DONT -> Quit
+----------------CMDQST----------------
+enter PLEASE: then the CMD (PLEASE:DO)
+--------------------------------------
