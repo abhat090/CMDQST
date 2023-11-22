@@ -7,7 +7,7 @@
                 "${workspaceFolder}/game/objects/headers/*"
             ],
             "defines": [],
-            "cStandard": "c17",
+            "cStandard": "c17"
         }
     ],
     "version": 4

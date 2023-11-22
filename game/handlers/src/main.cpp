@@ -7,23 +7,14 @@
 
 */
 
-#include "input.hpp"
 #include "output.hpp"
-#include "player.hpp"
 
 int main(){
     //Placeholder code
     Output output;
-    Input input;
+    cout << "does this work" << endl;
 
-    Player player;
-
-    int z = player.multiply(4,5);
-
-    output.clrscr();
-
-    string myString = input.getInput();
-    output.println(myString + to_string(z));
+    output.displayOut();
     
     return 0;
 }

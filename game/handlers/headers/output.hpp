@@ -1,7 +1,7 @@
 #pragma once
 #include <iostream>
-#include <stdlib.h>
-#include <stdio.h>
+#include <vector>
+#include "utility.hpp"
 
 #if _WIN32
     #define CLEAR_TERMINAL "CLS"
@@ -26,9 +26,23 @@ Functions implemented for all output
 */
 
 class Output{
-    protected:       
+    private:
+        bool _initialized;
+    protected:
+        vector<string> _display;
+        GAME_STATE _currentState; 
+
     public:
+        Output(); // Defaults to MENU
+        Output(GAME_STATE);
+
+        void displayOut();
+        void setState(GAME_STATE);
+
     //Placeholder functions
         void println(string input) { cout << input << endl; }
         void clrscr(){ system(CLEAR_TERMINAL); }
+
+    private:
+        void loadFile(vector<string>&, string);
 }; 
