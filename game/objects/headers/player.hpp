@@ -1,7 +1,9 @@
+#include <iostream>
 using namespace std;
-
-class Player{
+#include "character.hpp"
+class Player extends Character{
     private:
     public:
-        int multiply(int, int);
+        Player(string name, int HP, int atk, int def) : Character(name, HP, atk, def) {}
+        Player() : name(""), HP(0), atk(0), def(0) {}
 };
