@@ -40,6 +40,7 @@ In addition the architecture of the classes has also changed to support SOLID pr
 
 The next change has to do with following the Open-closed principle. Majorly all the members of every function are private despite the fact that it would be easier to make them all public. So instead for example, the player class contains many setters and getters as a plan ahead for when functions require changes to the private attributes like in the case on how a heal card will inevitably require the access to player class’s hp private member and even a setter in order to change it. Another change in the UML that demonstrates the open-closed principle is that the card class is being inherited by the three types of cards: attack, defense, and heal. This is why the name member is being protected with “#” as those three new types of cards will extend it while also keeping the name. This SOLID principle is crucial in our project as it adds security to our program in that only certain classes can access these members but also they limit the chance to break the program.
 
+Updated UML:![Screenshot 2023-11-22 at 12 07 25 AM](https://github.com/cs100/final-project-jmuth004-ssan003-abhat090-thass004/assets/75588493/4737dbde-da26-4033-ade6-0dda4e989059)
 
 ## Navigation Diagram
 ![Navigation Diagram](https://github.com/cs100/final-project-jmuth004-ssan003-abhat090-thass004/assets/137970302/214a4d29-1f57-41ec-9867-8c87a4fb0708)
