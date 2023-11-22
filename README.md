@@ -44,6 +44,11 @@ In addition the architecture of the classes has also changed to support SOLID pr
 
 The next change has to do with following the Open-closed principle. Majorly all the members of every function are private despite the fact that it would be easier to make them all public. So instead for example, the player class contains many setters and getters as a plan ahead for when functions require changes to the private attributes like in the case on how a heal card will inevitably require the access to player class’s hp private member and even a setter in order to change it. Another change in the UML that demonstrates the open-closed principle is that the card class is being inherited by the three types of cards: attack, defense, and heal. This is why the name member is being protected with “#” as those three new types of cards will extend it while also keeping the name. This SOLID principle is crucial in our project as it adds security to our program in that only certain classes can access these members but also they limit the chance to break the program.
 
+The other change that we made to the UML diagram is the use of the Liskov principle. In the UML diagram, we include the Player and Enemy class which both respectively inherit from the above Character class. All the functions are defined in the Character class being that Player and Enemy have essentially the same functionality. All functions are usable from the Player class and the Enemy class which are inherited from the Character class. Therefore, both the Player and the Enemy are interchangeable with the Character class without the risk of running into bugs and unexpected issues.
+
+To implement the Interface Segregation Principle, we split our parent classes of both Character and Card into two different categories instead of combining it into one “interface.” Even though characters would be utilizing the card class to carry out their attacks and defenses, we thought it would be best to separate both in order to prevent unnecessary bugs and unexpected issues. Instead, we found it best to have a “deck” (vector) of Card objects so that they are able to use the features of the card class without other issues.
+
+
 
 ## Navigation Diagram
 ![Navigation Diagram](https://github.com/cs100/final-project-jmuth004-ssan003-abhat090-thass004/assets/137970302/214a4d29-1f57-41ec-9867-8c87a4fb0708)
