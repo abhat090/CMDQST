@@ -2,7 +2,7 @@
 #include <iostream>
 using namespace std;
 
-void Character::setName(string name) {this->name = name;}
+void Character::setName(const string& name) {this->name = name;}
 void Character::setHP(int HP) {this->HP = HP;}
 void Character::setDef(int def) {this->def = def;}
 void Character::setAtk(int atk) {this->atk = atk;}
@@ -18,4 +18,16 @@ void Character::heal(int increaseHP) {
 }
 void Character::damage(int damage) {
     HP -= damage;
+}
+void Character::setName(const string& name) {
+    this->name = name;
+}
+void Character::setHP(int HP) {
+    this->HP = HP;
+}
+void Character::setAtk(int atk) {
+    this->atk = atk;
+}
+void Character::setDef(int def) {
+    this->def = def;
 }

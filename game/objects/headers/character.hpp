@@ -13,7 +13,7 @@ class Character {
     public:
     //Constructors
         Character() : name(""), HP(0), atk(0), def(0) {}
-        Character(string name, int HP, int atk, int def) : name(name), HP(HP), atk(atk), def(def) {}
+        Character(const string& name, int HP, int atk, int def) : name(name), HP(HP), atk(atk), def(def) {}
     //Changing Stats Functions
         //To decrease attack or defense stats make input paramenter negative
         void chAtkStats(int atk);
@@ -26,7 +26,7 @@ class Character {
         int getHP() {return HP;}
         int getDef() {return def;}
 
-        void setName(string name);
+        void setName(const string& name);
         void setHP(int HP);
         void setAtk(int atk);
         void setDef(int def);

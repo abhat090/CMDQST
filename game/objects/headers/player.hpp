@@ -4,6 +4,8 @@ using namespace std;
 class Player extends Character{
     private:
     public:
-        Player(string name, int HP, int atk, int def) : Character(name, HP, atk, def) {}
+        bool turn;
+        Player(string name, int HP, int atk, int def) : Character(name, HP, atk, def), turn(false) {}
         Player() : name(""), HP(0), atk(0), def(0) {}
+        void setTurn();
 };
