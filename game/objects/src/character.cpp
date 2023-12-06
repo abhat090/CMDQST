@@ -8,10 +8,10 @@ void Character::setDef(int def) {this->def = def;}
 void Character::setAtk(int atk) {this->atk = atk;}
 
 void Character::chAtkStats(int atk) {
-    this.atk += atk;
+    this->atk += atk;
 }
-void Character::chADefStats(int def) {
-    this.def += def
+void Character::chDefStats(int def) {
+    this->def += def;
 }
 void Character::heal(int increaseHP) {
     HP += increaseHP;

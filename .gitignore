@@ -6,3 +6,6 @@ CMakeFiles/
 *.vcxproj
 *.vcxproj.filters
 *.sln
+*.bin
+bin
+lib

@@ -8,7 +8,10 @@ ADD_SUBDIRECTORY(googletest)
 add_library(objectLib
     src/character.cpp
     src/player.cpp
-    src/TestCharacter.cpp
 )
 
-TARGET_LINK_LIBRARIES(runAllTests gtest)
+ADD_EXECUTABLE(test 
+    TestCharacter.cpp
+)
+TARGET_LINK_LIBRARIES(test gtest)
+TARGET_COMPILE_DEFINITIONS(test PRIVATE gtest_disable_pthreads=ON)

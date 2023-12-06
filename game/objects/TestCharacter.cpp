@@ -1,5 +1,5 @@
-#include "src/googletest/googletest/gtest.h"
-#include "../headers/character.hpp"
+#include "googletest/googletest/include/gtest/gtest.h"
+#include "src/character.cpp"
 
 // Test the default constructor
 TEST(CharacterTest, DefaultConstructor) {
