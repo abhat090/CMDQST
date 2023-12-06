@@ -34,11 +34,20 @@ This UML diagram shows the design of our RPG card game. It consists of multple p
 
 ![Class Diagram](https://github.com/cs100/final-project-jmuth004-ssan003-abhat090-thass004/assets/137970302/6ec50141-ffb8-4a5a-8853-74bfb1898d08)
 
-The previous UML diagram has since changed. The first change that occurred is to rename the class names by removing the .cpp at the end and capitalizing the first letter. The next change is that since the classes Player and Enemy are constructed the same way, sharing much of the same members and functions, making them inherit from a class is a great way to start from there. In addition to that in simpler terms the main class contains a Game object which is a composition of a Player, Enemy, Card (and its descendents), Input, and Output classes. This relationship has been identified by using the composition arrows to the Game class while Game also acts like an aggregate to Main. These changes will further be explained below.
+Updated UML:![Screenshot 2023-11-22 at 12 23 48 AM](https://github.com/cs100/final-project-jmuth004-ssan003-abhat090-thass004/assets/75588493/05367380-292f-4c2d-b748-7c50d55ab85c)
+
+
+
+The previous UML diagram has since changed. The first change that occurred is to rename the class names by removing the .cpp at the end and capitalizing the first letter. The next change is that since the classes Player and Enemy are constructed the same way, sharing much of the same members and functions, making them inherit from a class is a great way to start from there. In addition to that in simpler terms the main class contains a Game object which is a composition of a Player, Enemy, Card (and its descendents), Input, and Output classes. This relationship has been identified by using the composition arrows to the Game class while Game also acts like an aggregate to Main. These changes will further be explained below. In addition, the classes Input and Output have been created. The Output class has a dependency on the enumeration struct. However, this struct is also being used by the Utility class for a function that might come of use later. The GAME_STATE struct is used as a parameter within the Output class hence its dependency. However it is not to say that Output does not depend on the Utility class because later that could change in order to determine if the game has ended or not. Furthermore this class could also be used as an aggregate class or something the Input class depends on in case to determine what state the game is in.
 
 In addition the architecture of the classes has also changed to support SOLID principles. The newest addition are three brand new classes that will help the project fulfill the Single-responsibility principle. In this case, the main class will contain a game class which is a composition of an input class, output class, and the combined aggregate classes of player, card, and enemy classes. Having the input, game, and output classes ensure that every class only has a particular function thus avoiding any confusions. For example the card class only provides an easier interface to access the attack, defense, or heal cards. This is useful for our code because it allows us to easily troubleshoot bugs as there is only one class that has a particular function not several. Doing this allows us to efficiently mesh our code as well by testing each class separately before bringing them together.
 
 The next change has to do with following the Open-closed principle. Majorly all the members of every function are private despite the fact that it would be easier to make them all public. So instead for example, the player class contains many setters and getters as a plan ahead for when functions require changes to the private attributes like in the case on how a heal card will inevitably require the access to player class’s hp private member and even a setter in order to change it. Another change in the UML that demonstrates the open-closed principle is that the card class is being inherited by the three types of cards: attack, defense, and heal. This is why the name member is being protected with “#” as those three new types of cards will extend it while also keeping the name. This SOLID principle is crucial in our project as it adds security to our program in that only certain classes can access these members but also they limit the chance to break the program.
+
+The other change that we made to the UML diagram is the use of the Liskov principle. In the UML diagram, we include the Player and Enemy class which both respectively inherit from the above Character class. All the functions are defined in the Character class being that Player and Enemy have essentially the same functionality. All functions are usable from the Player class and the Enemy class which are inherited from the Character class. Therefore, both the Player and the Enemy are interchangeable with the Character class without the risk of running into bugs and unexpected issues.
+
+To implement the Interface Segregation Principle, we split our parent classes of both Character and Card into two different categories instead of combining it into one “interface.” Even though characters would be utilizing the card class to carry out their attacks and defenses, we thought it would be best to separate both in order to prevent unnecessary bugs and unexpected issues. Instead, we found it best to have a “deck” (vector) of Card objects so that they are able to use the features of the card class without other issues.
+
 
 
 ## Navigation Diagram
@@ -151,44 +160,6 @@ CONTINUE? >>
 ```
 Input in this screen is also simply `PLEASE:do` or simply `do`/`dont` (please keyword isn't necessary). Dont counts as a quit/game-over.
 
-## Class Diagram
- > Include a **class diagram(s)** for your project and a **description** of the diagram(s). Your class diagram(s) should include all the main classes you plan for the project. This should be in sufficient detail that another group could pick up the project this point and successfully complete it. Use proper UML notation (as discussed in the course slides).
-
-## Phase 2
- > In addition to completing the "User Interface Specification" and "Class Diagram" sections below, you will need to:
- > * Create an "Epic" (note) for each feature. Place these epics in the `Product Backlog` column
- > * Complete your first *sprint planning* meeting to plan out the next 7 days of work.
- >   * Break down the "Epics" into smaller actionable user stories (i.e. smaller development tasks). Convert them into issues and assign them to team members. Place these in the `TODO` (aka Sprint Backlog) column.
- >   * These cards should represent roughly 7 days worth of development time for your team. Then, once the sprint is over you should be repeating these steps to plan a new sprint, taking you until your second scrum meeting with the reader in phase III.
- > * Schedule two check-ins using Calendly. You need to pick both time slots on Tuesday of week 6. The check-ins will occur on Zoom. Your entire team must be present for both check-ins.
- >   * The first check-in needs to be scheduled with your lab TA. During that meeting, you will discuss your project design/class diagram from phase II.
- >   * The second check-in should be scheduled with a reader. During that meeting you will discuss:
- >     * The tasks you are planning for the first sprint
- >     * How work will be divided between the team members
-## User Interface Specification
- > Include a navigation diagram for your screens and the layout of each of those screens as desribed below. For all the layouts/diagrams, you can use any tool such as PowerPoint or a drawing program. (Specification requirement is adapted from [this template](https://redirect.cs.umbc.edu/~mgrass2/cmsc345/Template_UI.doc))
-
- > ## Phase III
- > You will need to schedule a check-in for the second scrum meeting with the same reader you had your first scrum meeting with (using Calendly). Your entire team must be present. This meeting will occur on Zoom and should be conducted by Wednesday of week 8.
- 
- > BEFORE the meeting you should do the following:
- > * Update your class diagram from Phase II to include any feedback you received from your TA/grader.
- > * Considering the SOLID design principles, reflect back on your class diagram and think about how you can use the SOLID principles to improve your design. You should then update the README.md file by adding the following:
- >   * A new class diagram incorporating your changes after considering the SOLID principles.
- >   * For each update in your class diagram, you must explain in 3-4 sentences:
- >     * What SOLID principle(s) did you apply?
- >     * How did you apply it? i.e. describe the change.
- >     * How did this change help you write better code?
- > * Perform a new sprint plan like you did in Phase II.
- > * You should also make sure that your README file (and Project board) are up-to-date reflecting the current status of your project and the most recent class diagram. Previous versions of the README file should still be visible through your commit history.
- 
-> During the meeting with your reader you will discuss: 
- > * How effective your last sprint was (each member should talk about what they did)
- > * Any tasks that did not get completed last sprint, and how you took them into consideration for this sprint
- > * Any bugs you've identified and created issues for during the sprint. Do you plan on fixing them in the next sprint or are they lower priority?
- > * What tasks you are planning for this next sprint.
-
- 
  > ## Final deliverable
  > All group members will give a demo to the reader during lab time. ou should schedule your demo on Calendly with the same reader who took your second scrum meeting. The reader will check the demo and the project GitHub repository and ask a few questions to all the team members. 
  > Before the demo, you should do the following:
