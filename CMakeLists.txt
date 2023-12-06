@@ -5,10 +5,12 @@ set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/lib")
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/lib")
 
 project(command_quest-CS100FINAL)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++1y")
 
 include_directories(
     ${CMAKE_SOURCE_DIR}/game/handlers/headers
     ${CMAKE_SOURCE_DIR}/game/objects/headers
+    ${CMAKE_SOURCE_DIR}/googletest/include/
 )
 
 add_subdirectory(game/handlers)
