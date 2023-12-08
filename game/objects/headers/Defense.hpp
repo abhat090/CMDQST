@@ -3,7 +3,7 @@ class Defense: public Card {
     public: 
         void setName();
         int getName();
-        void mildDefense();
-        void mediumDefense();
-        void heavyDefense();
+        void mildDefense(Player *);
+        void mediumDefense(Player *);
+        void heavyDefense(Player *);
 };

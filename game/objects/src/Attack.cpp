@@ -9,12 +9,15 @@ int Attack::getName() {
 int Attack::setName() {
    name = "Attack";
 }
-int Attack::mildAttack(Player * user, Enemy * enemyGame) {
-   enemy->health -= user->attack * .6;
+int Attack::mildAttack(Player * user, Enemy * enemy) {
+   enemy->HP -= intensity * .6;
+   user->HP -= cost * .6;
 }
-int Attack::mediumAttack(Player * user, Enemy * enemyGame) {
-   enemy->health -= user->attack;
+int Attack::mediumAttack(Player * user, Enemy * enemy) {
+   enemy->HP -= intensity;
+   user->HP -= cost;
 }
-int Attack::heavyAttack(Player * user, Enemy * enemyGame) {
-   enemy->health -= user->attack * 1.5;
+int Attack::heavyAttack(Player * user, Enemy * enemy) {
+   enemy->HP -= intensity * 1.5;
+   user->HP -= cost * 1.5;
 }
