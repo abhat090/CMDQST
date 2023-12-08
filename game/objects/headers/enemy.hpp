@@ -10,4 +10,6 @@ class Enemy : public Character {
     public:
         Enemy(string name, int HP) : Character(name, HP) {}
         Enemy() : Character("", 0) {}
+
+        void Attack(Character*);
 };

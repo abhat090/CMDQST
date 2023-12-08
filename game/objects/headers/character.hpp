@@ -2,8 +2,7 @@
 
 #include <iostream>
 #include <vector>
-
-#include "card.hpp"
+#include <map>
 
 using namespace std;
 
@@ -21,4 +20,6 @@ class Character {
 
         void setName(const string& name) { this->name = name; }
         void setHP(int HP) { this->health = HP; }
+
+        void takeDamage(int amt) { this->health -= amt; }
 };

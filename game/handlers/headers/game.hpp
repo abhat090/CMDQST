@@ -1,6 +1,7 @@
 #pragma once
 
 #include <iostream>
+
 #include "output.hpp"
 #include "input.hpp"
 
@@ -35,8 +36,10 @@ class Game{
         void collection();
 
         void game_cmd();
-
+        void attack_cmd(string);
         void transition_toCMD();
+
+        void process_CMD(string);
 
         void run();
 };

@@ -45,7 +45,7 @@ void Output::out_GAME_CMD(){
         << "The " << _enemy->getName() << " doesn't seem too frigtened by you" << endl
         << endl
         << "------------------CARDS----------------------------------" << endl
-        << "Attack  - A       | BSC x4, LGND x1" << endl
+        << "Attack  - A       | BSC x" << _player->_attack.count("BSC") << ", EPIC x" << _player->_attack.count("EPIC") << endl
         << "Defend  - D       | LGHT x1, HVY x1, CLSL x1" << endl
         << "Heal    - H       | fruit x4, ptn30 x2, ptn80 x1" << endl
         << "Type    - T       | fire x2, water x2" << endl

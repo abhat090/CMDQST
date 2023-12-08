@@ -2,16 +2,17 @@
 
 #include <iostream>
 #include "character.hpp"
+#include "card.hpp"
 
 using namespace std;
 
 class Player : public Character{
-    private:
-        vector<Card> _deck;
-        
     public:
-        bool turn;
-        Player(string name, int HP) : Character(name, HP), turn(false) {}
+        multimap<string, Attack*> _attack;
+
+    public:
+        Player(string name, int HP) : Character(name, HP) {}
         Player() : Character("", 0) {}
-        void setTurn();
+
+        void getCard(CARD_TYPE, int);
 };

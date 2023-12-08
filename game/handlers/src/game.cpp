@@ -13,13 +13,17 @@ Game::Game(){
 
     _output = new Output(_player, _enemy);
     _input = new Input();
+
+    _player->getCard(ATTACK, 2);
 }
 
 Game::~Game(){
     _output->clrscr();
 
-    delete _player, _enemy;
-    delete _output, _input;
+    delete _player;
+    delete _enemy;
+    delete _output;
+    delete _input;
 }
 
 void Game::run(){
@@ -131,8 +135,47 @@ void Game::game_cmd(){
         string userCMD;
         userCMD = _input->getInput();
 
-        if(userCMD == "DONT"){
-            _gameState = MAIN_MENU;
+        process_CMD(userCMD);
+    }
+}
+
+void Game::attack_cmd(string CMD){
+    auto i = _player->_attack.find(CMD);
+
+    _output->clrscr();
+    _output->println(_player->getName() + " <<\n");
+    this_thread::sleep_for(chrono::milliseconds(500));
+
+    cout << "  Attack - 5" << endl;
+    this_thread::sleep_for(chrono::milliseconds(500));
+
+    cout << "  " << CMD << " - x" << i->second->getRarity() << endl << endl;
+    this_thread::sleep_for(chrono::milliseconds(500));
+
+    cout << "DMG DEALT = " << i->second->effect(_enemy) << endl;
+    cout << _enemy->getName() << " --- HP:" << _enemy->getHP() << endl;
+
+    for(int i = 0; i < 3; i++){
+        _output->println(".");
+        this_thread::sleep_until(chrono::system_clock::now() + chrono::seconds(1));
+    }
+
+    _player->_attack.erase(i);
+}
+
+void Game::process_CMD(string CMD){
+    if(CMD.at(0) == 'A'){
+        if(CMD.contains("BSC") && (_player->_attack.count("BSC") > 0)){
+            attack_cmd("BSC");
         }
+        if(CMD.contains("EPIC") && (_player->_attack.count("EPIC") > 0)){
+            attack_cmd("EPIC");
+        }
+    }
+    else if(CMD == "DONT"){
+        _gameState = MAIN_MENU;
+    }
+    else{
+        return;
     }
 }
