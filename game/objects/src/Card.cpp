@@ -1,4 +1,6 @@
 #include "Card.hpp"
+#include <iostream>
+using namespace.std;
 
 int Card::getIntensity() {
     return intensity;

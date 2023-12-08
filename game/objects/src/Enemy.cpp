@@ -1,6 +1,7 @@
 #include "Enemy.hpp"
 #include <cstdlib>  
 #include <ctime>  
+using namespace std;
 
 void Enemy::setHealth() {
     srand(time(0));
