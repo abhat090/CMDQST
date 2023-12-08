@@ -160,15 +160,18 @@ void Game::attack_cmd(string CMD){
         this_thread::sleep_until(chrono::system_clock::now() + chrono::seconds(1));
     }
 
+    delete i->second;
     _player->_attack.erase(i);
 }
 
 void Game::process_CMD(string CMD){
     if(CMD.at(0) == 'A'){
-        if(CMD.contains("BSC") && (_player->_attack.count("BSC") > 0)){
+        if(CMD.find("BSC") != string::npos
+        && (_player->_attack.count("BSC") > 0)){
             attack_cmd("BSC");
         }
-        if(CMD.contains("EPIC") && (_player->_attack.count("EPIC") > 0)){
+        if(CMD.find("EPIC") != string::npos
+        && (_player->_attack.count("EPIC") > 0)){
             attack_cmd("EPIC");
         }
     }

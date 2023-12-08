@@ -9,4 +9,5 @@ add_executable(cmd_alpha.exe
 )
 
 TARGET_LINK_LIBRARIES(cmd_alpha.exe objectLib)
-set_property(TARGET cmd_alpha.exe PROPERTY CXX_STANDARD 23)
+SET_PROPERTY(TARGET cmd_alpha.exe PROPERTY CXX_STANDARD 23)
+SET(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} -g")

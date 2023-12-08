@@ -13,6 +13,7 @@ class Player : public Character{
     public:
         Player(string name, int HP) : Character(name, HP) {}
         Player() : Character("", 0) {}
+        ~Player();
 
         void getCard(CARD_TYPE, int);
 };

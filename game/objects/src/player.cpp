@@ -1,5 +1,11 @@
 #include "player.hpp"
 
+Player::~Player(){
+    for(auto i = this->_attack.begin(); i != this->_attack.end(); i++){
+        delete i->second;
+    }
+}
+
 void Player::getCard(CARD_TYPE t, int rarity){
     switch(t){
         default:
