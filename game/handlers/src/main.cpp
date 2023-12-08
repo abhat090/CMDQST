@@ -18,12 +18,9 @@ int main(){
 
     Player player;
 
-    int z = player.multiply(4,5);
-
     output.clrscr();
 
     string myString = input.getInput();
-    output.println(myString + to_string(z));
     
     return 0;
 }
