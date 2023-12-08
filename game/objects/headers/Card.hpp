@@ -16,5 +16,4 @@ class Card {
         int getCost();
         void setCost(int);
         void printCard() const;
-
 };

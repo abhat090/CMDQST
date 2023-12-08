@@ -5,7 +5,7 @@ class Player extends Character{
     private:
     public:
         bool turn;
-        Player(string name, int HP, int atk, int def) : Character(name, HP, atk, def), turn(false) {}
-        Player() : name(""), HP(0), atk(0), def(0) {}
+        Player(string name, int HP) : Character(name, HP), turn(false) {}
+        Player() : name(""), HP(0) {}
         void setTurn();
 };
