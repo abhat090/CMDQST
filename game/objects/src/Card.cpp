@@ -2,6 +2,12 @@
 #include <iostream>
 using namespace.std;
 
+Card::Card () {
+    srand(time(0));
+    name = "";
+    intensity = rand() % 10;
+    cost = rand() % 10;
+}
 int Card::getIntensity() {
     return intensity;
 }
