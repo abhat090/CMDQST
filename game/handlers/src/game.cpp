@@ -6,15 +6,7 @@
 using namespace std;
 
 Game::Game(){
-    _gameState = MAIN_MENU;
-
-    _player = new Player("Player 1", 100);
-    _enemy = new Enemy("Minotaur", 55);
-
-    _output = new Output(_player, _enemy);
-    _input = new Input();
-
-    _player->getCard(ATTACK, 2);
+    init();
 }
 
 Game::~Game(){
@@ -24,6 +16,26 @@ Game::~Game(){
     delete _enemy;
     delete _output;
     delete _input;
+}
+
+void Game::init(){
+    _gameState = MAIN_MENU;
+
+    _player = new Player("Player 1", 40);
+    _enemy = new Enemy("Minotaur", 55);
+
+    _output = new Output(_player, _enemy);
+    _input = new Input();
+
+    _player->getCard(ATTACK, 1);
+    _player->getCard(ATTACK, 1);
+    _player->getCard(ATTACK, 1);
+
+    _player->getCard(ATTACK, 2);
+    _player->getCard(ATTACK, 2);
+
+    _player->getCard(ATTACK, 3);
+    _player->getCard(ATTACK, 3);
 }
 
 void Game::run(){
@@ -43,6 +55,12 @@ void Game::run(){
                 break;
             case TRANSITION_TO_CMD:
                 transition_toCMD();
+                break;
+            case GAME_OVER:
+                game_over();
+                break;
+            case VICTORY:
+                victory();
                 break;
             default:
                 _gameState = MAIN_MENU;
@@ -160,8 +178,44 @@ void Game::attack_cmd(string CMD){
         this_thread::sleep_until(chrono::system_clock::now() + chrono::seconds(1));
     }
 
-    delete i->second;
-    _player->_attack.erase(i);
+    if(i->second->getRarity() != 0){
+        delete i->second;
+        _player->_attack.erase(i);
+    }
+
+    if(_enemy->getHP() <= 0){
+        _gameState = VICTORY;
+        return;
+    }
+
+    defend_cmd();
+}
+
+void Game::defend_cmd(){
+    int dmg = _enemy->Attack(_player);
+
+    _output->clrscr();
+    _output->println(_enemy->getName() + " <<\n");
+    this_thread::sleep_for(chrono::milliseconds(500));
+
+    cout << "  Attack - " << dmg << endl;
+    this_thread::sleep_for(chrono::milliseconds(500));
+
+    cout << "  Critical - Miss" << endl << endl;
+    this_thread::sleep_for(chrono::milliseconds(500));
+
+    cout << "DMG DEALT = " << dmg << endl;
+    cout << _player->getName() << " --- HP:" << _player->getHP() << endl;
+
+    for(int i = 0; i < 3; i++){
+        _output->println(".");
+        this_thread::sleep_until(chrono::system_clock::now() + chrono::seconds(1));
+    }
+
+    if(_player->getHP() <= 0){
+        _gameState = GAME_OVER;
+        return;
+    }
 }
 
 void Game::process_CMD(string CMD){
@@ -170,7 +224,11 @@ void Game::process_CMD(string CMD){
         && (_player->_attack.count("BSC") > 0)){
             attack_cmd("BSC");
         }
-        if(CMD.find("EPIC") != string::npos
+        else if(CMD.find("RARE") != string::npos
+        && (_player->_attack.count("RARE") > 0)){
+            attack_cmd("RARE");
+        }
+        else if(CMD.find("EPIC") != string::npos
         && (_player->_attack.count("EPIC") > 0)){
             attack_cmd("EPIC");
         }
@@ -179,6 +237,36 @@ void Game::process_CMD(string CMD){
         _gameState = MAIN_MENU;
     }
     else{
+        attack_cmd("FLAIL");
         return;
     }
+}
+
+void Game::game_over(){
+    _output->clrscr();
+    _output->out_GAME_OVER();
+
+    this_thread::sleep_for(chrono::seconds(3));
+
+    delete _player;
+    delete _enemy;
+    delete _input;
+    delete _output;
+
+    init();
+}
+
+void Game::victory(){
+    _output->clrscr();
+    _output->out_VICTORY();
+
+    this_thread::sleep_for(chrono::seconds(3));
+
+    // Eventually should be developed to loop game
+    delete _player;
+    delete _enemy;
+    delete _input;
+    delete _output;
+
+    init();
 }

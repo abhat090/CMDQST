@@ -11,5 +11,5 @@ class Enemy : public Character {
         Enemy(string name, int HP) : Character(name, HP) {}
         Enemy() : Character("", 0) {}
 
-        void Attack(Character*);
+        int Attack(Character*);
 };

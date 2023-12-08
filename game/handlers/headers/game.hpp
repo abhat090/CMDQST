@@ -13,6 +13,7 @@ enum GAMESTATE{
     COLLECTION,
     GAME_CMD,
     GAME_OVER,
+    VICTORY,
     TRANSITION_TO_CMD,
     QUIT
 };
@@ -30,14 +31,19 @@ class Game{
     public:
         Game();
         ~Game();
-
+        void init();
+        
         void main_menu();
         void name_select();
         void collection();
 
         void game_cmd();
         void attack_cmd(string);
+        void defend_cmd();
         void transition_toCMD();
+
+        void game_over();
+        void victory();
 
         void process_CMD(string);
 

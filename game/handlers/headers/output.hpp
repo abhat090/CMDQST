@@ -43,6 +43,9 @@ class Output{
         
         void out_GAME_CMD();
 
+        void out_GAME_OVER();
+        void out_VICTORY();
+
         //Placeholder Functions
         void println(string input) { cout << input << endl; }
         void clrscr(){ system(CLEAR_TERMINAL); }

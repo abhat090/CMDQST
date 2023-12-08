@@ -38,17 +38,31 @@ void Output::out_COLLECTION(){
 
 void Output::out_GAME_CMD(){
     cout << "---------------------------------------------------CMDQST" << endl
-        << _player->getName() << " --- HP:" << _player->getHP() << "+(20) | " 
+        << _player->getName() << " --- HP:" << _player->getHP() << " | " 
         << _enemy->getName() << " --- HP:" << _enemy->getHP() << endl
         << endl
         << "Grrr~" << endl
         << "The " << _enemy->getName() << " doesn't seem too frigtened by you" << endl
         << endl
         << "------------------CARDS----------------------------------" << endl
-        << "Attack  - A       | BSC x" << _player->_attack.count("BSC") << ", EPIC x" << _player->_attack.count("EPIC") << endl
+        << "Attack  - A       | BSC x" << _player->_attack.count("BSC") << 
+                             ", RARE x" << _player->_attack.count("RARE") << 
+                             ", EPIC x" << _player->_attack.count("EPIC") << endl
         << "Defend  - D       | LGHT x1, HVY x1, CLSL x1" << endl
         << "Heal    - H       | fruit x4, ptn30 x2, ptn80 x1" << endl
         << "Type    - T       | fire x2, water x2" << endl
         << "---------------------------------------------------------" << endl
         << "CMD >> ";
+}
+
+void Output::out_GAME_OVER(){
+    cout << "GAME_OVER <<" << endl;
+}
+
+void Output::out_VICTORY(){
+    cout << "---------------------------------------------------CMDQST" << endl 
+        << endl
+        << "VICTORY | Defeated " << _enemy->getName() << endl
+        << endl
+        << "---------------------------------------------------------" << endl;
 }

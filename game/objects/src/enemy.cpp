@@ -2,6 +2,9 @@
 
 using namespace std;
 
-void Enemy::Attack(Character* target){
-    target->takeDamage(int(rand() % 5 + 5));
+int Enemy::Attack(Character* target){
+    int dmg = int(rand() % 5 + 5);
+    target->takeDamage(dmg);
+
+    return dmg;
 }
