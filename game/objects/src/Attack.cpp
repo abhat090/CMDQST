@@ -10,11 +10,23 @@ int Attack::setName() {
    name = "Attack";
 }
 int Attack::mildAttack(Player * user, Enemy * enemyGame) {
-   enemy->health -= user->attack * .6;
+   if (Player->turn == true) {
+      enemy->health -= user->attack * .6;
+   }else {
+      user->health -= enemy->attack * .6;
+   }
 }
 int Attack::mediumAttack(Player * user, Enemy * enemyGame) {
-   enemy->health -= user->attack;
+   if (Player->turn == true) {
+      enemy->health -= user->attack;
+   }else {
+      user->health -= enemy->attack;
+   }
 }
 int Attack::heavyAttack(Player * user, Enemy * enemyGame) {
-   enemy->health -= user->attack * 1.5;
+   if (Player->turn == true) {
+      enemy->health -= user->attack * 1.5;
+   }else {
+      user->health -= enemy->attack * 1.5;
+   }
 }
