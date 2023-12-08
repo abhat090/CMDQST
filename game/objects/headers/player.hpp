@@ -1,11 +1,15 @@
+#pragma once
+
 #include <iostream>
-using namespace std;
 #include "character.hpp"
-class Player extends Character{
+
+using namespace std;
+
+class Player : public Character{
     private:
     public:
         bool turn;
         Player(string name, int HP) : Character(name, HP), turn(false) {}
-        Player() : name(""), HP(0) {}
+        Player() : Character("", 0) {}
         void setTurn();
 };

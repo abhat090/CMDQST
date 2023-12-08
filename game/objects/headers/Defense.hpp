@@ -1,4 +1,5 @@
 #include "Card.hpp"
+
 class Defense: public Card {
     public: 
         void setName();

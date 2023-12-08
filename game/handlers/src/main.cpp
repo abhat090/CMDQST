@@ -7,23 +7,11 @@
 
 */
 
-#include "input.hpp"
-#include "output.hpp"
-#include "player.hpp"
+#include "game.hpp"
 
 int main(){
-    //Placeholder code
-    Output output;
-    Input input;
+    Game _game;
 
-    Player player;
-
-    int z = player.multiply(4,5);
-
-    output.clrscr();
-
-    string myString = input.getInput();
-    output.println(myString + to_string(z));
-    
+    _game.run();
     return 0;
 }

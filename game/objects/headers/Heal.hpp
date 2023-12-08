@@ -1,4 +1,5 @@
 #include "Card.hpp"
+
 class Heal: public Card {
     public:
         void setName();

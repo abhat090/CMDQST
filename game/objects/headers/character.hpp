@@ -2,7 +2,12 @@
 #define CHARACTER_HPP
 
 #include <iostream>
+#include <vector>
+
+#include "Card.hpp"
+
 using namespace std;
+
 class Character {
     private:
         string name;

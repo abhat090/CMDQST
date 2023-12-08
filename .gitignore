@@ -9,4 +9,4 @@ CMakeFiles/
 *.bin
 bin
 lib
-googletest
+googletest/

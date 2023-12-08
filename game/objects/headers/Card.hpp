@@ -1,6 +1,7 @@
-#include "character.hpp"
+#include "player.hpp"
 #include <ctime>
 #include <cstdlib>
+
 class Card {
     protected:
         int intensity;
@@ -8,11 +9,14 @@ class Card {
         string name;
         //future plans: Card burning property discussed in scrum, if time permits
     public:
-        virtual void setName() = 0;
-        virtual const string& getName() = 0;
         Card();
+
+        void setName();
+        const string& getName();
+
         int getIntensity();
         void setIntensity(int);
+        
         int getCost();
         void setCost(int);
         void printCard() const;

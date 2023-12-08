@@ -1,0 +1,50 @@
+[
+{
+  "directory": "/Users/aryabhattacharjee/Documents/CS100/final-project-jmuth004-ssan003-abhat090-thass004/build/game/handlers",
+  "command": "/usr/bin/clang++  -I/Users/aryabhattacharjee/Documents/CS100/final-project-jmuth004-ssan003-abhat090-thass004/game/handlers/headers -I/Users/aryabhattacharjee/Documents/CS100/final-project-jmuth004-ssan003-abhat090-thass004/game/objects/headers -I/Users/aryabhattacharjee/Documents/CS100/final-project-jmuth004-ssan003-abhat090-thass004/googletest/include  -std=c++1y -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk -o CMakeFiles/cmd_alpha.exe.dir/src/main.cpp.o -c /Users/aryabhattacharjee/Documents/CS100/final-project-jmuth004-ssan003-abhat090-thass004/game/handlers/src/main.cpp",
+  "file": "/Users/aryabhattacharjee/Documents/CS100/final-project-jmuth004-ssan003-abhat090-thass004/game/handlers/src/main.cpp",
+  "output": "game/handlers/CMakeFiles/cmd_alpha.exe.dir/src/main.cpp.o"
+},
+{
+  "directory": "/Users/aryabhattacharjee/Documents/CS100/final-project-jmuth004-ssan003-abhat090-thass004/build/game/objects",
+  "command": "/usr/bin/clang++  -I/Users/aryabhattacharjee/Documents/CS100/final-project-jmuth004-ssan003-abhat090-thass004/game/handlers/headers -I/Users/aryabhattacharjee/Documents/CS100/final-project-jmuth004-ssan003-abhat090-thass004/game/objects/headers -I/Users/aryabhattacharjee/Documents/CS100/final-project-jmuth004-ssan003-abhat090-thass004/googletest/include  -std=c++1y -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk -o CMakeFiles/objectLib.dir/src/Attack.cpp.o -c /Users/aryabhattacharjee/Documents/CS100/final-project-jmuth004-ssan003-abhat090-thass004/game/objects/src/Attack.cpp",
+  "file": "/Users/aryabhattacharjee/Documents/CS100/final-project-jmuth004-ssan003-abhat090-thass004/game/objects/src/Attack.cpp",
+  "output": "game/objects/CMakeFiles/objectLib.dir/src/Attack.cpp.o"
+},
+{
+  "directory": "/Users/aryabhattacharjee/Documents/CS100/final-project-jmuth004-ssan003-abhat090-thass004/build/game/objects",
+  "command": "/usr/bin/clang++  -I/Users/aryabhattacharjee/Documents/CS100/final-project-jmuth004-ssan003-abhat090-thass004/game/handlers/headers -I/Users/aryabhattacharjee/Documents/CS100/final-project-jmuth004-ssan003-abhat090-thass004/game/objects/headers -I/Users/aryabhattacharjee/Documents/CS100/final-project-jmuth004-ssan003-abhat090-thass004/googletest/include  -std=c++1y -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk -o CMakeFiles/objectLib.dir/src/Card.cpp.o -c /Users/aryabhattacharjee/Documents/CS100/final-project-jmuth004-ssan003-abhat090-thass004/game/objects/src/Card.cpp",
+  "file": "/Users/aryabhattacharjee/Documents/CS100/final-project-jmuth004-ssan003-abhat090-thass004/game/objects/src/Card.cpp",
+  "output": "game/objects/CMakeFiles/objectLib.dir/src/Card.cpp.o"
+},
+{
+  "directory": "/Users/aryabhattacharjee/Documents/CS100/final-project-jmuth004-ssan003-abhat090-thass004/build/game/objects",
+  "command": "/usr/bin/clang++  -I/Users/aryabhattacharjee/Documents/CS100/final-project-jmuth004-ssan003-abhat090-thass004/game/handlers/headers -I/Users/aryabhattacharjee/Documents/CS100/final-project-jmuth004-ssan003-abhat090-thass004/game/objects/headers -I/Users/aryabhattacharjee/Documents/CS100/final-project-jmuth004-ssan003-abhat090-thass004/googletest/include  -std=c++1y -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk -o CMakeFiles/objectLib.dir/src/character.cpp.o -c /Users/aryabhattacharjee/Documents/CS100/final-project-jmuth004-ssan003-abhat090-thass004/game/objects/src/character.cpp",
+  "file": "/Users/aryabhattacharjee/Documents/CS100/final-project-jmuth004-ssan003-abhat090-thass004/game/objects/src/character.cpp",
+  "output": "game/objects/CMakeFiles/objectLib.dir/src/character.cpp.o"
+},
+{
+  "directory": "/Users/aryabhattacharjee/Documents/CS100/final-project-jmuth004-ssan003-abhat090-thass004/build/game/objects",
+  "command": "/usr/bin/clang++  -I/Users/aryabhattacharjee/Documents/CS100/final-project-jmuth004-ssan003-abhat090-thass004/game/handlers/headers -I/Users/aryabhattacharjee/Documents/CS100/final-project-jmuth004-ssan003-abhat090-thass004/game/objects/headers -I/Users/aryabhattacharjee/Documents/CS100/final-project-jmuth004-ssan003-abhat090-thass004/googletest/include  -std=c++1y -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk -o CMakeFiles/objectLib.dir/src/Defense.cpp.o -c /Users/aryabhattacharjee/Documents/CS100/final-project-jmuth004-ssan003-abhat090-thass004/game/objects/src/Defense.cpp",
+  "file": "/Users/aryabhattacharjee/Documents/CS100/final-project-jmuth004-ssan003-abhat090-thass004/game/objects/src/Defense.cpp",
+  "output": "game/objects/CMakeFiles/objectLib.dir/src/Defense.cpp.o"
+},
+{
+  "directory": "/Users/aryabhattacharjee/Documents/CS100/final-project-jmuth004-ssan003-abhat090-thass004/build/game/objects",
+  "command": "/usr/bin/clang++  -I/Users/aryabhattacharjee/Documents/CS100/final-project-jmuth004-ssan003-abhat090-thass004/game/handlers/headers -I/Users/aryabhattacharjee/Documents/CS100/final-project-jmuth004-ssan003-abhat090-thass004/game/objects/headers -I/Users/aryabhattacharjee/Documents/CS100/final-project-jmuth004-ssan003-abhat090-thass004/googletest/include  -std=c++1y -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk -o CMakeFiles/objectLib.dir/src/Enemy.cpp.o -c /Users/aryabhattacharjee/Documents/CS100/final-project-jmuth004-ssan003-abhat090-thass004/game/objects/src/Enemy.cpp",
+  "file": "/Users/aryabhattacharjee/Documents/CS100/final-project-jmuth004-ssan003-abhat090-thass004/game/objects/src/Enemy.cpp",
+  "output": "game/objects/CMakeFiles/objectLib.dir/src/Enemy.cpp.o"
+},
+{
+  "directory": "/Users/aryabhattacharjee/Documents/CS100/final-project-jmuth004-ssan003-abhat090-thass004/build/game/objects",
+  "command": "/usr/bin/clang++  -I/Users/aryabhattacharjee/Documents/CS100/final-project-jmuth004-ssan003-abhat090-thass004/game/handlers/headers -I/Users/aryabhattacharjee/Documents/CS100/final-project-jmuth004-ssan003-abhat090-thass004/game/objects/headers -I/Users/aryabhattacharjee/Documents/CS100/final-project-jmuth004-ssan003-abhat090-thass004/googletest/include  -std=c++1y -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk -o CMakeFiles/objectLib.dir/src/Heal.cpp.o -c /Users/aryabhattacharjee/Documents/CS100/final-project-jmuth004-ssan003-abhat090-thass004/game/objects/src/Heal.cpp",
+  "file": "/Users/aryabhattacharjee/Documents/CS100/final-project-jmuth004-ssan003-abhat090-thass004/game/objects/src/Heal.cpp",
+  "output": "game/objects/CMakeFiles/objectLib.dir/src/Heal.cpp.o"
+},
+{
+  "directory": "/Users/aryabhattacharjee/Documents/CS100/final-project-jmuth004-ssan003-abhat090-thass004/build/game/objects",
+  "command": "/usr/bin/clang++  -I/Users/aryabhattacharjee/Documents/CS100/final-project-jmuth004-ssan003-abhat090-thass004/game/handlers/headers -I/Users/aryabhattacharjee/Documents/CS100/final-project-jmuth004-ssan003-abhat090-thass004/game/objects/headers -I/Users/aryabhattacharjee/Documents/CS100/final-project-jmuth004-ssan003-abhat090-thass004/googletest/include  -std=c++1y -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk -o CMakeFiles/objectLib.dir/src/player.cpp.o -c /Users/aryabhattacharjee/Documents/CS100/final-project-jmuth004-ssan003-abhat090-thass004/game/objects/src/player.cpp",
+  "file": "/Users/aryabhattacharjee/Documents/CS100/final-project-jmuth004-ssan003-abhat090-thass004/game/objects/src/player.cpp",
+  "output": "game/objects/CMakeFiles/objectLib.dir/src/player.cpp.o"
+}
+]

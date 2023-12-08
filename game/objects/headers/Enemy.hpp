@@ -3,14 +3,12 @@ using namespace std;
 
 #include "character.hpp"
 
-class Enemy extends Character {
+class Enemy : public Character {
     private:
     public:
         bool turn;
-        Enemy(string name, int HP, int atk, int def) : Character(name, HP, atk, def), turn(0) {}
-        Enemy() : name(""), HP(0), atk(0), def(0) {}
+        Enemy(string name, int HP) : Character(name, HP), turn(0) {}
+        Enemy() : Character("", 0) {}
         void setTurn(); //changes to true or false depending on turn
-        
-
 
 };
