@@ -7,31 +7,22 @@ class Character {
     private:
         string name;
         int HP;
-        int atk;
-        int def;
         vector<Card> deck;
     public:
     //Constructors
-        Character() : name(""), HP(0), atk(0), def(0) {}
-        Character(const string& name, int HP, int atk, int def) : name(name), HP(HP), atk(atk), def(def) {}
+        Character() : name(""), HP(0) {}
+        Character(const string& name, int HP) : name(name), HP(HP) {}
     //Changing Stats Functions
         //To decrease attack or defense stats make input paramenter negative
-        void chAtkStats(int atk);
-        void chDefStats(int def);
-        void heal(int increaseHP);
-        void damage(int damage);
+        
     //Setters & Getters
         string getName() {return name;}
-        int getAtk() {return atk;}
         int getHP() {return HP;}
-        int getDef() {return def;}
 
         void setName(const string& name);
         void setHP(int HP);
-        void setAtk(int atk);
-        void setDef(int def);
     //deck fuunctions
-        void printDeck();
+        void printDeck(); 
 };
 
 #endif

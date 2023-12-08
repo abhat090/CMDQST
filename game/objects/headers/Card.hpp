@@ -15,5 +15,6 @@ class Card {
         void setIntensity(int);
         int getCost();
         void setCost(int);
+        void printCard() const;
 
 };

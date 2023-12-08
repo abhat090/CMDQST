@@ -3,7 +3,7 @@ class Heal: public Card {
     public:
         void setName();
         int getName(); 
-        void mildHeal(Enemy *);
-        void mediumHeal(Enemy *);
-        void heavyHeal(Enemy *);
+        void mildHeal(Player *);
+        void mediumHeal(Player *);
+        void heavyHeal(Player *);
 };
