@@ -4,7 +4,7 @@
             "name": "Winx32",
             "includePath": [
                 "${workspaceFolder}/game/**/",
-                "${workspaceFolder}/game/objects/headers/*"
+                "${workspaceFolder}/game/objects/headers"
             ],
             "defines": [],
             "cStandard": "c17"

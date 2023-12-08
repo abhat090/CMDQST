@@ -18,9 +18,5 @@ Functions implemented for all states when user input is required
 class Input{
     protected:
     public:
-        string getInput(){
-            string input;
-            cin >> input;
-            return input;
-        }
+        string getInput();
 };

@@ -1,7 +1,11 @@
 #pragma once
+
 #include <iostream>
-#include <vector>
-#include "utility.hpp"
+#include <stdlib.h>
+#include <stdio.h>
+
+#include "player.hpp"
+#include "enemy.hpp"
 
 #if _WIN32
     #define CLEAR_TERMINAL "CLS"
@@ -26,24 +30,19 @@ Functions implemented for all output
 */
 
 class Output{
-    private:
-        bool _initialized;
-        
     protected:
-        vector<string> _display;
-        GAME_STATE _currentState; 
+        Player* _player;
+        Enemy* _enemy;
 
     public:
-        Output(); // Defaults to MENU
-        Output(GAME_STATE);
+        Output(Player* player, Enemy* enemy) : _player(player), _enemy(enemy) {}
+        
+        void out_MAIN_MENU();
+        void out_NAME_SELECT();
+        void out_COLLECTION();
+        void out_GAME_CMD();
 
-        void displayOut();
-        void setState(GAME_STATE);
-
-    //Placeholder functions
+        //Placeholder Functions
         void println(string input) { cout << input << endl; }
         void clrscr(){ system(CLEAR_TERMINAL); }
-
-    private:
-        void loadFile(vector<string>&, string);
 }; 

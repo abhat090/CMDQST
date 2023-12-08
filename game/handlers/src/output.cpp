@@ -1,47 +1,37 @@
-#include <fstream>
-#include <stdio.h>
 #include "output.hpp"
 
-Output::Output() {
-    _currentState = GAME_CMD;
-    _initialized = false;
-    this->loadFile(_display, "output/" + stateToString(_currentState) + ".txt");
+using namespace std;
+
+void Output::out_MAIN_MENU(){
+    cout << "Welcome in! What would you like to do?" << endl 
+        << "DO -> DEATH" << endl
+        << "DO -> DEATH" << endl
+        << "DO -> DEATH" << endl
+        << "COL -> Look at your Collection" << endl
+        << "NAME -> Set Name" << endl
+        << "DONT -> Quit" << endl
+        << "----------------CMDQST----------------" << endl
+        << "enter PLEASE: then the CMD (PLEASE:DO)" << endl
+        << "--------------------------------------" << endl
+        << "CMD >> ";
 }
 
-void Output::displayOut(){
-    this->clrscr();
-
-    for (int i = 0; i < _display.size(); i++){
-        cout << _display.at(i) << endl;
-    }
-
-    string randomtext;
-    
-    cout << "CMD >> ";
-    cin >> randomtext;
+void Output::out_NAME_SELECT(){
+    cout << "-----------------------------CMDQST" << endl
+        << endl
+        << "Current name: " << _player->getName() << endl
+        << "Enter a new name for your Warrior" << endl
+        << endl
+        << "-----------------------------------" << endl
+        << "NAME >> ";
 }
 
-void Output::loadFile(vector<string>& display, string fileName){
-    ifstream file;
-    
-    try {
-        file.open(fileName);
-        if(!file.is_open()) throw 1;
-    }
-    catch (int e){
-        cout << "Something bad happened" << endl;
-        return;
-    }
-
-    int lineCounter = 0;
-
-    while (!file.fail()){
-        string tempString;
-        getline(file, tempString);
-        _display.push_back(tempString);
-        lineCounter++;
-    }
-
-    _initialized = true;
-    file.close();
+void Output::out_COLLECTION(){
+    cout << "-----------------------------CMDQST" << endl
+        << endl
+        << "This feature is yet to be implemented!" << endl
+        << "Enter 'DONT' to go back." << endl
+        << endl
+        << "-----------------------------------" << endl
+        << "CMD >> ";
 }

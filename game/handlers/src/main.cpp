@@ -6,14 +6,12 @@
     !!! SHOULDN'T CONTAIN ANY GAME LOGIC !!!
 
 */
-
-#include "output.hpp"
+#include "game.hpp"
 
 int main(){
     //Placeholder code
-    Output output;
+    Game game;
+    game.run();
 
-    output.displayOut();
-    
     return 0;
 }
