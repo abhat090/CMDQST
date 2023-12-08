@@ -9,6 +9,7 @@ class Character {
         int HP;
         int atk;
         int def;
+        vector<Card> deck;
     public:
     //Constructors
         Character() : name(""), HP(0), atk(0), def(0) {}
@@ -29,6 +30,8 @@ class Character {
         void setHP(int HP);
         void setAtk(int atk);
         void setDef(int def);
+    //deck fuunctions
+        void printDeck();
 };
 
 #endif
