@@ -1,15 +1,22 @@
 #pragma once
 
-#include <string>
+#include <iostream>
 
 using namespace std;
 
+enum CARD_TYPE{
+    ATTACK,
+    DEFEND,
+    HEAL,
+    TYPE
+};
+
 class Card {
     protected:
-        int intensity;
-        int cost;
+        int rarity;
+        CARD_TYPE type;
+        
         string name;
-        //future plans: Card burning property discussed in scrum, if time permits
         
     public:
         Card();

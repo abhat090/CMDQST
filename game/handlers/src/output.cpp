@@ -35,3 +35,20 @@ void Output::out_COLLECTION(){
         << "-----------------------------------" << endl
         << "CMD >> ";
 }
+
+void Output::out_GAME_CMD(){
+    cout << "---------------------------------------------------CMDQST" << endl
+        << _player->getName() << " --- HP:" << _player->getHP() << "+(20) | " 
+        << _enemy->getName() << " --- HP:" << _enemy->getHP() << endl
+        << endl
+        << "Grrr~" << endl
+        << "The " << _enemy->getName() << " doesn't seem too frigtened by you" << endl
+        << endl
+        << "------------------CARDS----------------------------------" << endl
+        << "Attack  - A       | BSC x4, LGND x1" << endl
+        << "Defend  - D       | LGHT x1, HVY x1, CLSL x1" << endl
+        << "Heal    - H       | fruit x4, ptn30 x2, ptn80 x1" << endl
+        << "Type    - T       | fire x2, water x2" << endl
+        << "---------------------------------------------------------" << endl
+        << "CMD >> ";
+}

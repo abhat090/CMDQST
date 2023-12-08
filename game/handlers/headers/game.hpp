@@ -12,6 +12,7 @@ enum GAMESTATE{
     COLLECTION,
     GAME_CMD,
     GAME_OVER,
+    TRANSITION_TO_CMD,
     QUIT
 };
 
@@ -34,6 +35,8 @@ class Game{
         void collection();
 
         void game_cmd();
+
+        void transition_toCMD();
 
         void run();
 };

@@ -40,6 +40,7 @@ class Output{
         void out_MAIN_MENU();
         void out_NAME_SELECT();
         void out_COLLECTION();
+        
         void out_GAME_CMD();
 
         //Placeholder Functions

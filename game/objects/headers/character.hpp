@@ -10,21 +10,15 @@ using namespace std;
 class Character {
     private:
         string name;
-        int HP;
-        vector<Card> deck;
+        int health;
+
     public:
-    //Constructors
-        Character() : name(""), HP(0) {}
-        Character(const string& name, int HP) : name(name), HP(HP) {}
-    //Changing Stats Functions
-        //To decrease attack or defense stats make input paramenter negative
-        
-    //Setters & Getters
+        Character() : name(""), health(0) {}
+        Character(const string& name, int HP) : name(name), health(HP) {}
+
         string getName() {return name;}
-        int getHP() {return HP;}
+        int getHP() {return health;}
 
         void setName(const string& name) { this->name = name; }
-        void setHP(int HP);
-    //deck fuunctions
-        void printDeck(); 
+        void setHP(int HP) { this->health = HP; }
 };

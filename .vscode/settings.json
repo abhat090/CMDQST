@@ -60,6 +60,7 @@
         "variant": "cpp",
         "vector": "cpp",
         "algorithm": "cpp",
-        "fstream": "cpp"
+        "fstream": "cpp",
+        "thread": "cpp"
     }
 }

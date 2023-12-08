@@ -1,12 +1,15 @@
 #include "game.hpp"
 
+#include <thread>
+#include <chrono> // Purely for delay purposes
+
 using namespace std;
 
 Game::Game(){
     _gameState = MAIN_MENU;
 
     _player = new Player("Player 1", 100);
-    _enemy = new Enemy();
+    _enemy = new Enemy("Minotaur", 55);
 
     _output = new Output(_player, _enemy);
     _input = new Input();
@@ -33,6 +36,10 @@ void Game::run(){
                 break;
             case GAME_CMD:
                 game_cmd();
+                break;
+            case TRANSITION_TO_CMD:
+                transition_toCMD();
+                break;
             default:
                 _gameState = MAIN_MENU;
                 break;
@@ -55,7 +62,7 @@ void Game::main_menu(){
         }
 
         else if(player_input == "DO"){
-            _gameState = GAME_CMD;
+            _gameState = TRANSITION_TO_CMD;
             return;
         }
 
@@ -100,6 +107,32 @@ void Game::collection(){
     return;
 }
 
-void Game::game_cmd(){
+void Game::transition_toCMD(){
+    _output->clrscr();
+
+    cout << "----------------------------CMDQST" << endl;
+    cout << _player->getName() << " vs. " << _enemy->getName() << endl;
+    cout << "----------------------------------" << endl;        
     
+    for(int i = 0; i < 3; i++){
+        _output->println(".");
+        this_thread::sleep_until(chrono::system_clock::now() + chrono::seconds(1));
+    }
+
+    _gameState = GAME_CMD;
+    return;
+}
+
+void Game::game_cmd(){
+    while (_gameState == GAME_CMD){
+        _output->clrscr();
+        _output->out_GAME_CMD();
+
+        string userCMD;
+        userCMD = _input->getInput();
+
+        if(userCMD == "DONT"){
+            _gameState = MAIN_MENU;
+        }
+    }
 }

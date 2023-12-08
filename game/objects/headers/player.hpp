@@ -7,6 +7,8 @@ using namespace std;
 
 class Player : public Character{
     private:
+        vector<Card> _deck;
+        
     public:
         bool turn;
         Player(string name, int HP) : Character(name, HP), turn(false) {}
