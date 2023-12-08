@@ -12,7 +12,6 @@
 int main(){
     //Placeholder code
     Output output;
-    cout << "does this work" << endl;
 
     output.displayOut();
     

@@ -1,0 +1,13 @@
+---------------------------------------------------CMDQST
+PLAYER --- HP:30+(20) | Minotaur --- HP:50
+
+Grrr~ <<
+The Minotaur doesn't seem too frigtened by you
+
+------------------CARDS----------------------------------
+Attack  - A       | BSC x4, LGND x1
+Defend  - D       | LGHT x1, HVY x1, CLSL x1
+Heal    - H       | fruit x4, ptn30 x2, ptn80 x1
+Type    - T       | fire x2, water x2
+---------------------------------------------------------
+Your CMD >> 

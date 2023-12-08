@@ -1,24 +1,25 @@
 #include <fstream>
+#include <stdio.h>
 #include "output.hpp"
 
-
 Output::Output() {
-    _currentState = MENU_MAIN;
+    _currentState = GAME_CMD;
     _initialized = false;
-    this->loadFile(_display, "MENU_MAIN.txt");
+    this->loadFile(_display, "output/" + stateToString(_currentState) + ".txt");
 }
 
 void Output::displayOut(){
-
     this->clrscr();
 
-    cout << _display.size() << "_" << _initialized << endl;
-    //cout << _display.at(0) << endl;
+    for (int i = 0; i < _display.size(); i++){
+        cout << _display.at(i) << endl;
+    }
 
     string randomtext;
+    
+    cout << "CMD >> ";
     cin >> randomtext;
 }
-
 
 void Output::loadFile(vector<string>& display, string fileName){
     ifstream file;

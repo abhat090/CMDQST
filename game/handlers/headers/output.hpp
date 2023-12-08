@@ -28,6 +28,7 @@ Functions implemented for all output
 class Output{
     private:
         bool _initialized;
+        
     protected:
         vector<string> _display;
         GAME_STATE _currentState; 
